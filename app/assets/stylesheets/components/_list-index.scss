@@ -1,0 +1,59 @@
+body{
+  background-image: url('https://static.wixstatic.com/media/65b880_625b1baaaca44ba6970cccf8dd850274~mv2.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #9668df;
+
+}
+
+
+.main-title{
+  display:flex;
+  justify-content:center;
+  font-family: Doyle;
+  font-size: 5em;
+  color: #cada15;
+  letter-spacing: .1rem;
+  // border: 1px solid #db85d8;
+  padding: 10px;
+  background-color: #9668df00;
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border-radius:5px ;
+}
+
+.new-list-link {
+  display:flex;
+  justify-content:center;
+
+  font-family: Doyle;
+  border: 1px solid #ea88e6;
+  border-radius:20px;
+  padding: 10px;
+  background-color: #9668df;
+  width: 20%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.add-button{
+text-decoration: none;
+color: aliceblue;
+
+}
+
+.list-container {
+  display: flex;
+  justify-content: center;
+}
+
+.list-item{
+  text-decoration: none;
+  font-family: Doyle;
+  color: #75ddf2;
+  font-size: 2em;
+}
+
+

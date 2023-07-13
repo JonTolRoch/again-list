@@ -1,0 +1,20 @@
+<body>
+
+<span class="main-title">WatchList</span>
+
+<div class="new-list-link">
+  <% if @count == 0 %>
+    <%= link_to " 👉 Create a new list 👈", new_list_path,class:"add-button" %>
+  <% else %>
+    <%= link_to "👉 Add another list 👈", new_list_path,class:"add-button"%>
+  <% end %>
+</div>
+p
+<%# LISTS  %>
+<% @lists.each do |list| %>
+  <div class="list-container">
+    <%= link_to list.name, list_path(list),class:"list-item" %>
+  </div>
+<% end %>
+
+</body>

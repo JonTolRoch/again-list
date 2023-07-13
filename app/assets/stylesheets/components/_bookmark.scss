@@ -1,0 +1,74 @@
+.list-name{
+  color: aliceblue;
+  font-family: Doyle;
+  font-size: 5vh;
+  display: flex;
+  justify-content: center;
+}
+.empty-message {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Doyle;
+  color: rgb(243, 250, 215);
+  font-size: 1em;
+}
+
+.no-decoration-link {
+  text-decoration: none;
+  color: rgb(243, 250, 215);
+}
+
+ //BOOKMARK
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.bookmark-card {
+  width: 300px; /* Adjust the width as needed */
+  background-color: #4f0a7d; /* Optional: Add a background color */
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 4px; /* Optional: Add rounded corners */
+  // padding: 10px; /* Optional: Add padding */
+  margin: 10px; /* Optional: Add margin */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('https://as2.ftcdn.net/v2/jpg/01/71/74/49/1000_F_171744995_u4KjXeKS61D3oxApKNHpJkKV81iA7dSs.jpg');
+
+}
+
+.bookmark-image {
+  margin-bottom: 10px; /* Optional: Add spacing between image and text */
+}
+
+.bookmark-text {
+  margin-bottom: 5px;
+  font-family: doyle;
+  color: rgb(233, 235, 228);
+}
+
+//SUB PAGE LINKS
+.sub-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.sub-item {
+  margin: 0 50px;
+  size: 10em;
+}
+
+.form-container{
+  display:flex;
+  justify-content: center;
+  background-color: #df618500;
+}
+

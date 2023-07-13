@@ -1,0 +1,9 @@
+<div class="form-container">
+<%= simple_form_for([@list,@bookmark],url:create_bookmark_path(@list)) do |f|%>
+  <%= f.input :comment, placeholder: "Enter a comment about the movie"%>
+  <%= f.association :movie %>
+  <%= f.submit %>
+<% end %>
+</div>
+
+
