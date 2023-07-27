@@ -1,0 +1,16 @@
+<div class="t-footer">
+
+  <%= link_to root_path do %>
+  <i class="fa-solid fa-house"></i>
+  <% end %>
+
+  <%= link_to new_bookmark_path(@list) do %>
+    <i class="fas fa-bookmark"></i>
+  <% end %>
+
+
+  <%= link_to delete_list_path(@list), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this list?" }, class: "text-danger" do %>
+    <i class="fas fa-trash-alt"></i>
+  <% end %>
+
+</div>

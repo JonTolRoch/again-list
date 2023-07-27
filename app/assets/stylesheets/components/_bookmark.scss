@@ -1,60 +1,86 @@
-.list-name{
-  color: aliceblue;
+.list-name {
+  color: rgb(237, 244, 35);
   font-family: Doyle;
   font-size: 5vh;
   display: flex;
   justify-content: center;
 }
+
 .empty-message {
   text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: Doyle;
-  color: rgb(243, 250, 215);
+  color: rgb(237, 244, 35);
   font-size: 1em;
 }
 
 .no-decoration-link {
   text-decoration: none;
-  color: rgb(243, 250, 215);
+  color: rgb(205, 245, 47);
 }
 
- //BOOKMARK
 
+
+
+/* BOOKMARK */
 .main-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
+  margin-bottom: 70px;
 }
 
 .bookmark-card {
-  width: 300px; /* Adjust the width as needed */
-  background-color: #4f0a7d; /* Optional: Add a background color */
-  border: 1px solid #ccc; /* Add a border */
-  border-radius: 4px; /* Optional: Add rounded corners */
-  // padding: 10px; /* Optional: Add padding */
-  margin: 10px; /* Optional: Add margin */
+  width: 300px;
+  background-color: #4f0a7d;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url('https://as2.ftcdn.net/v2/jpg/01/71/74/49/1000_F_171744995_u4KjXeKS61D3oxApKNHpJkKV81iA7dSs.jpg');
+  background-image: url('https://i.pinimg.com/originals/31/13/22/311322e2de994adce06671fc6c46d016.gif');
+  min-height: 390px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s;
+
+  &:hover{
+    transform: translateY(-5px);
+  }
 
 }
+
+
 
 .bookmark-image {
-  margin-bottom: 10px; /* Optional: Add spacing between image and text */
+  margin-bottom: 10px;
 }
 
-.bookmark-text {
-  margin-bottom: 5px;
+.bookmark-movie {
+  max-width: 100%;
   font-family: doyle;
   color: rgb(233, 235, 228);
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-//SUB PAGE LINKS
+.bookmark-comment {
+  max-height: 100px;
+  font-family: doyle;
+  color: rgb(228, 235, 235);
+  font-size: 14px;
+  overflow-y: auto;
+  word-wrap: break-word;
+}
+
+/* SUB PAGE LINKS */
 .sub-links {
   display: flex;
   justify-content: center;
@@ -66,9 +92,12 @@
   size: 10em;
 }
 
-.form-container{
-  display:flex;
+.form-container {
+  display: flex;
   justify-content: center;
   background-color: #df618500;
 }
+
+
+
 

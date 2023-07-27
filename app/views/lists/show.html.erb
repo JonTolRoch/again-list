@@ -1,22 +1,22 @@
 <div class="list-name">
   <strong><%= @list.name %></strong>
 </div>
+
 <div class="empty-message">
   <% if @list.bookmarks.count.zero? %>
-    <%= link_to "List has no Bookmarks yet...Click here to add",new_bookmark_path(@list), class: "no-decoration-link"%>
-
+    <%= link_to "List has no Bookmarks yet...Click here to add", new_bookmark_path(@list), class: "no-decoration-link" %>
   <% end %>
 </div>
 
 <div class="main-container">
   <% @list.movies.each do |movie| %>
-    <div class="bookmark-card">
+    <div class="bookmark-card" data-controller="movie-modal" data-movie-id="<%= movie.id %>">
       <div class="bookmark-image">
         <%= image_tag movie.poster_url %>
       </div>
       <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
-      <div class="bookmark-text"><%= movie.title %></div>
-      <div class="bookmark-text"><%= bookmark.comment %></div>
+      <div class="bookmark-movie"><%= movie.title %></div>
+      <div class="bookmark-comment"><%= "'#{bookmark.comment}'" %></div>
       <%= link_to delete_bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this bookmark?" }, class: "text-danger" do %>
         <i class="fas fa-trash-alt"></i>
       <% end %>
@@ -24,20 +24,7 @@
   <% end %>
 </div>
 
-<div class="sub-links">
-  <span class="sub-item">
-    <%= link_to new_bookmark_path(@list) do %>
-      <i class="fas fa-bookmark"></i>
-    <% end %>
-  </span>
-  <span class="sub-item">
-    <%= link_to lists_path do %>
-      <i class="fas fa-arrow-left"></i>
-    <% end %>
-  </span>
-  <span class="sub-item">
-    <%= link_to delete_list_path(@list), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this list?" }, class: "text-danger" do %>
-      <i class="fas fa-trash-alt"></i>
-    <% end %>
-  </span>
-</div>
+<footer>
+  <%= render 'shared/footer' %>
+</footer>
+

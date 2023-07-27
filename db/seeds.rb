@@ -16,7 +16,7 @@ def generate_movies(count)
   base_url = "https://image.tmdb.org/t/p/"
   poster_size = "w185"
 
-  url = "http://tmdb.lewagon.com/movie/popular"
+  url = "http://tmdb.lewagon.com/movie/now_playing"
   count.times do |i|
     puts "Importing Movies from page #{i + 1}"
     movies = JSON.parse(URI.open("#{url}?page=#{i + 1}").read)['results']
